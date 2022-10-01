@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import os
 
 plt.figure(figsize=(10, 8), dpi=80)
-with os.scandir("/home/will/Documents/Astrophysics/stellar-model/data") as it:
+with os.scandir("data") as it:
     for entry in it: 
 
         with open(entry) as datFile:
