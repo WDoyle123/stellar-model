@@ -24,6 +24,7 @@ ax = plt.gca()
 ax.set_xlim(ax.get_xlim()[::-1])
 
 plt.legend()
+plt.savefig("graph.jpg", dpi=120) 
 plt.show()
 plt.close()
 
