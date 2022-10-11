@@ -15,7 +15,14 @@ with os.scandir("data") as it:
             teff = ([float(data.split()[2]) for data in datFile])
             teff.pop(0)
 
-        plt.plot(teff,lum, marker =".", ls="dotted" ,label=entry.name)
+        with open(entry) as datFile:
+            next(datFile)
+            mass = ([(data.split()[20]) for data in datFile])
+            mass = (" "+mass[0])
+            print(mass)
+
+
+        plt.plot(teff,lum, marker =".", ls="dotted" ,label=entry.name + mass)
 
 plt.title("The Physics of Stellar Models - William Doyle")
 plt.ylabel("Luminosity, Log L")
